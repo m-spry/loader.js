@@ -1,0 +1,249 @@
+/* Index Styles */
+body {
+	background-color: #ededed;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#index-container {
+	width: 100%;
+	margin: 50px auto 0px auto;
+	padding: 30px 0px 30px 0px;
+}
+
+/* Page based styles.
+May vary from page to page. */
+
+.page-container {
+	background: #393939;
+	padding: 50px 15px;
+	margin: 0px 0px 50px 0px;
+}
+.ie-loveletter {
+	background: #9d1f1f;
+	padding: 20px 15px;
+	margin: 0px 0px 50px 0px;
+}
+.page-container h1{
+	font-family: "Lucida Console", Monaco, monospace;
+	padding-bottom: 25px;
+	color: #DCDCDF;
+	font-variant: small-caps;
+	letter-spacing: 0.25em;
+	font-size: large;
+}
+.page-container h3 {
+	color: #DCDCDF;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-bottom: 10px;
+}
+.page-container h4 {
+	color: #7DAAC5;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-container p {
+	color: #DCDCDF;
+	font-size: 0.85em;
+	font-family: Verdana, Geneva, sans-serif;
+	line-height: normal;
+}
+
+.page-container a {
+	color: #999999;
+	text-decoration: none;
+}
+
+.content-list {
+	list-style:none;
+	color: #DCDCDF;
+	font-size: 0.85em;
+}
+
+/* Foot Styles */
+#foot {
+	text-align: center;
+	height: 15%;
+	padding-bottom: 25px;
+}
+#foot h3 {
+	padding-bottom: 5px;
+	font-family: "Lucida Console", Monaco, monospace;
+	letter-spacing: 0.25em;
+}
+
+/* Extras / Useful Classes */
+.wrapper { /* Standard wrapper class */
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/* #Media Queries
+================================================== */
+
+	@media only screen and (max-width: 767px) {
+
+		#index-container {
+			width: auto;
+   		}
+
+   		.page-container {
+	   		font-size: medium;
+   		}
+
+   		.wrapper {
+	   		width: auto;
+   		}
+
+   		#foot {
+	   		padding-top: 30px;
+	   		text-align: center;
+	   		height: 15%;
+	   	}
+	   	#foot h3 {
+		   	padding-bottom: 5px;
+		   	font-family: "Lucida Console", Monaco, monospace;
+		   	letter-spacing: 0.25em;
+		   	font-size: small;
+		}
+
+   	}
+	@media only screen and (max-width: 1015px) {
+		.wrapper {
+			width: auto;
+		}
+		#MacSpooferImg {
+			max-width: 640px;
+			overflow-x: hidden;
+		}
+	}
+	@media only screen and (max-width: 640px) {
+		#index-container {
+   		}
+   		#MacSpooferImg {
+	   		max-width: 300px;
+	   		overflow-x: hidden;
+   		}
+	}
+	
+#nav { /* Navigation Div */
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    margin: 0;
+    z-index: 9999;
+    background-color: #666666;
+    height: 36px;
+    display: block;
+}
+
+.logo { /* Contains Logo */
+	top: 0;
+	left: 0px;
+	display: block;
+	float: left;
+	padding: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	z-index: 9998;
+}
+	.logo a:link {color: rgba(231,231,243,0.90); text-decoration: none;}
+	.logo a:visited {color: rgba(231,231,243,0.90); text-decoration: none;}
+	.logo a:hover {color: rgba(143,143,143,0.9); text-decoration: none;}
+
+
+#menus { /* Contains all dropdowns */
+	position: fixed;
+	float: right;
+	top: 0;
+	right: 0;
+	z-index: 9997;
+}
+	#menus > a,
+	#menus > .NaviMenu > a
+	 { /* Menu Link Styles */
+		font-weight: bold;
+		text-decoration: none;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		padding: 10px;
+		display: block;
+		text-align: center;
+	}
+
+	.NaviMenu {
+		overflow-y: hidden;
+		overflow-x: hidden;
+		height: 36px;
+	 	float: left;
+		display: block;
+		width: auto;
+	}
+
+		.NaviMenu > ul > a > li {
+			padding: 10px 0px;
+			text-align: center;
+			margin: 0 auto;
+			display: inline;
+			text-decoration: none;
+			font-variant: small-caps;
+			font-weight: bold;
+			display: block;
+		}
+		.NaviMenu > ul > a > li:hover {
+			background-color: #4e4e4e;
+			color: white;
+		}
+		.NaviMenu > ul > br {
+			display: none;
+		}
+	#MobileLogo {
+		display: none;
+	}
+	.NaviMenuClick:before { content:"Navigation Menu"; }
+
+
+/* #Media Queries
+================================================== */
+@media only screen and (max-width: 767px) {
+	#nav { /* Navigation Div */
+		background-color:#666666;
+	}
+	#menus {
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		float: none;
+	}
+
+	.NaviMenu {
+		z-index: 9998;
+		width: 100%;
+	}
+	.NaviMenuClick {
+		float:right;
+		top: 0;
+		right: 0;
+	}
+		.NaviMenu > ul > a > li {
+			font-size: small;
+			font-weight: normal;
+		}
+		.NaviMenu > ul > br {
+			display: block;
+		}
+	#menus > a,
+	#menus > .NaviMenu > a
+	 { /* Menu Link Styles */
+		font-size: small;
+		padding: 10px -15px 10px -15px;
+
+	}
+	#MobileLogo {
+		display: block;
+	}
+	.NaviMenuClick:before { content:"Menu"; }
+}
+@media only screen and (max-width: 640px) {
+}
